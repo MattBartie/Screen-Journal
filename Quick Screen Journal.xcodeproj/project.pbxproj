@@ -11,7 +11,58 @@
 		C96BE5892C77CA25007B6CA0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96BE5882C77CA25007B6CA0 /* ContentView.swift */; };
 		C96BE58B2C77CA28007B6CA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96BE58A2C77CA28007B6CA0 /* Assets.xcassets */; };
 		C96BE58E2C77CA28007B6CA0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C96BE58D2C77CA28007B6CA0 /* Preview Assets.xcassets */; };
+		C96BE59B2C77CA85007B6CA0 /* Intents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96BE59A2C77CA85007B6CA0 /* Intents.framework */; };
+		C96BE59E2C77CA85007B6CA0 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96BE59D2C77CA85007B6CA0 /* IntentHandler.swift */; };
+		C96BE5A62C77CA86007B6CA0 /* IntentsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C96BE5A52C77CA86007B6CA0 /* IntentsUI.framework */; };
+		C96BE5A92C77CA86007B6CA0 /* IntentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96BE5A82C77CA86007B6CA0 /* IntentViewController.swift */; };
+		C96BE5AC2C77CA86007B6CA0 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = C96BE5AB2C77CA86007B6CA0 /* Base */; };
+		C96BE5B02C77CA86007B6CA0 /* JournalIntentUI.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C96BE5A42C77CA86007B6CA0 /* JournalIntentUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C96BE5B32C77CA86007B6CA0 /* JournalIntent.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = C96BE5982C77CA85007B6CA0 /* JournalIntent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C96BE5BC2C77CABB007B6CA0 /* JournalIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = C96BE5BB2C77CABB007B6CA0 /* JournalIntents.intentdefinition */; };
+		C96BE5BF2C77CCD5007B6CA0 /* JournalIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = C96BE5BB2C77CABB007B6CA0 /* JournalIntents.intentdefinition */; };
+		C96BE5C02C77CCD6007B6CA0 /* JournalIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = C96BE5BB2C77CABB007B6CA0 /* JournalIntents.intentdefinition */; };
+		C96BE5C22C77CD0F007B6CA0 /* QuickJournalIntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96BE5C12C77CD0F007B6CA0 /* QuickJournalIntentHandler.swift */; };
+		C96BE5C62C77D1A0007B6CA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96BE5C52C77D1A0007B6CA0 /* SceneDelegate.swift */; };
+		C96BE5C82C77D584007B6CA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96BE5C72C77D584007B6CA0 /* AppDelegate.swift */; };
+		C9B3E83F2C7EBA340092B417 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3E83E2C7EBA340092B417 /* SharedData.swift */; };
+		C9B3E8402C7EBA340092B417 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3E83E2C7EBA340092B417 /* SharedData.swift */; };
+		C9B3E8422C7F73960092B417 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3E8412C7F73960092B417 /* ViewController.swift */; };
+		C9B3E8442C8178A20092B417 /* journalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B3E8432C8178A20092B417 /* journalView.swift */; };
+		C9CFEBEC2C91596200D56B7B /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CFEBEB2C91596200D56B7B /* JournalEntry.swift */; };
+		C9CFEBEE2C928B9200D56B7B /* JournalDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CFEBED2C928B9200D56B7B /* JournalDisplay.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C96BE5AE2C77CA86007B6CA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C96BE57B2C77CA25007B6CA0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C96BE5A32C77CA86007B6CA0;
+			remoteInfo = JournalIntentUI;
+		};
+		C96BE5B12C77CA86007B6CA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C96BE57B2C77CA25007B6CA0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C96BE5972C77CA85007B6CA0;
+			remoteInfo = JournalIntent;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C96BE5BA2C77CA86007B6CA0 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C96BE5B32C77CA86007B6CA0 /* JournalIntent.appex in Embed Foundation Extensions */,
+				C96BE5B02C77CA86007B6CA0 /* JournalIntentUI.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C96BE5832C77CA25007B6CA0 /* Quick Screen Journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quick Screen Journal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -19,6 +70,28 @@
 		C96BE5882C77CA25007B6CA0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C96BE58A2C77CA28007B6CA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C96BE58D2C77CA28007B6CA0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C96BE5982C77CA85007B6CA0 /* JournalIntent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = JournalIntent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C96BE59A2C77CA85007B6CA0 /* Intents.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Intents.framework; path = System/Library/Frameworks/Intents.framework; sourceTree = SDKROOT; };
+		C96BE59D2C77CA85007B6CA0 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		C96BE59F2C77CA85007B6CA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C96BE5A42C77CA86007B6CA0 /* JournalIntentUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = JournalIntentUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C96BE5A52C77CA86007B6CA0 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
+		C96BE5A82C77CA86007B6CA0 /* IntentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentViewController.swift; sourceTree = "<group>"; };
+		C96BE5AB2C77CA86007B6CA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		C96BE5AD2C77CA86007B6CA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C96BE5BB2C77CABB007B6CA0 /* JournalIntents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = JournalIntents.intentdefinition; sourceTree = "<group>"; };
+		C96BE5BD2C77CAFA007B6CA0 /* Quick-Screen-Journal-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Quick-Screen-Journal-Info.plist"; sourceTree = SOURCE_ROOT; };
+		C96BE5C12C77CD0F007B6CA0 /* QuickJournalIntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickJournalIntentHandler.swift; sourceTree = "<group>"; };
+		C96BE5C52C77D1A0007B6CA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		C96BE5C72C77D584007B6CA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C9B3E83B2C7EB8970092B417 /* JournalIntentUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JournalIntentUI.entitlements; sourceTree = "<group>"; };
+		C9B3E83C2C7EB8B10092B417 /* JournalIntent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JournalIntent.entitlements; sourceTree = "<group>"; };
+		C9B3E83D2C7EB8B60092B417 /* Quick Screen Journal.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Quick Screen Journal.entitlements"; sourceTree = "<group>"; };
+		C9B3E83E2C7EBA340092B417 /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
+		C9B3E8412C7F73960092B417 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C9B3E8432C8178A20092B417 /* journalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = journalView.swift; sourceTree = "<group>"; };
+		C9CFEBEB2C91596200D56B7B /* JournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
+		C9CFEBED2C928B9200D56B7B /* JournalDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalDisplay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +102,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C96BE5952C77CA85007B6CA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C96BE59B2C77CA85007B6CA0 /* Intents.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C96BE5A12C77CA86007B6CA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C96BE5A62C77CA86007B6CA0 /* IntentsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -36,6 +125,9 @@
 			isa = PBXGroup;
 			children = (
 				C96BE5852C77CA25007B6CA0 /* Quick Screen Journal */,
+				C96BE59C2C77CA85007B6CA0 /* JournalIntent */,
+				C96BE5A72C77CA86007B6CA0 /* JournalIntentUI */,
+				C96BE5992C77CA85007B6CA0 /* Frameworks */,
 				C96BE5842C77CA25007B6CA0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				C96BE5832C77CA25007B6CA0 /* Quick Screen Journal.app */,
+				C96BE5982C77CA85007B6CA0 /* JournalIntent.appex */,
+				C96BE5A42C77CA86007B6CA0 /* JournalIntentUI.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,10 +145,20 @@
 		C96BE5852C77CA25007B6CA0 /* Quick Screen Journal */ = {
 			isa = PBXGroup;
 			children = (
+				C9B3E83D2C7EB8B60092B417 /* Quick Screen Journal.entitlements */,
+				C96BE5BD2C77CAFA007B6CA0 /* Quick-Screen-Journal-Info.plist */,
+				C96BE5BB2C77CABB007B6CA0 /* JournalIntents.intentdefinition */,
 				C96BE5862C77CA25007B6CA0 /* Quick_Screen_JournalApp.swift */,
 				C96BE5882C77CA25007B6CA0 /* ContentView.swift */,
-				C96BE58A2C77CA28007B6CA0 /* Assets.xcassets */,
+				C9CFEBED2C928B9200D56B7B /* JournalDisplay.swift */,
+				C9B3E8432C8178A20092B417 /* journalView.swift */,
+				C9CFEBEB2C91596200D56B7B /* JournalEntry.swift */,
+				C96BE5C52C77D1A0007B6CA0 /* SceneDelegate.swift */,
+				C9B3E8412C7F73960092B417 /* ViewController.swift */,
+				C96BE5C72C77D584007B6CA0 /* AppDelegate.swift */,
+				C9B3E83E2C7EBA340092B417 /* SharedData.swift */,
 				C96BE58C2C77CA28007B6CA0 /* Preview Content */,
+				C96BE58A2C77CA28007B6CA0 /* Assets.xcassets */,
 			);
 			path = "Quick Screen Journal";
 			sourceTree = "<group>";
@@ -67,6 +171,37 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		C96BE5992C77CA85007B6CA0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C96BE59A2C77CA85007B6CA0 /* Intents.framework */,
+				C96BE5A52C77CA86007B6CA0 /* IntentsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C96BE59C2C77CA85007B6CA0 /* JournalIntent */ = {
+			isa = PBXGroup;
+			children = (
+				C9B3E83C2C7EB8B10092B417 /* JournalIntent.entitlements */,
+				C96BE59D2C77CA85007B6CA0 /* IntentHandler.swift */,
+				C96BE5C12C77CD0F007B6CA0 /* QuickJournalIntentHandler.swift */,
+				C96BE59F2C77CA85007B6CA0 /* Info.plist */,
+			);
+			path = JournalIntent;
+			sourceTree = "<group>";
+		};
+		C96BE5A72C77CA86007B6CA0 /* JournalIntentUI */ = {
+			isa = PBXGroup;
+			children = (
+				C9B3E83B2C7EB8970092B417 /* JournalIntentUI.entitlements */,
+				C96BE5A82C77CA86007B6CA0 /* IntentViewController.swift */,
+				C96BE5AA2C77CA86007B6CA0 /* MainInterface.storyboard */,
+				C96BE5AD2C77CA86007B6CA0 /* Info.plist */,
+			);
+			path = JournalIntentUI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,15 +212,52 @@
 				C96BE57F2C77CA25007B6CA0 /* Sources */,
 				C96BE5802C77CA25007B6CA0 /* Frameworks */,
 				C96BE5812C77CA25007B6CA0 /* Resources */,
+				C96BE5BA2C77CA86007B6CA0 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C96BE5AF2C77CA86007B6CA0 /* PBXTargetDependency */,
+				C96BE5B22C77CA86007B6CA0 /* PBXTargetDependency */,
 			);
 			name = "Quick Screen Journal";
 			productName = "Quick Screen Journal";
 			productReference = C96BE5832C77CA25007B6CA0 /* Quick Screen Journal.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C96BE5972C77CA85007B6CA0 /* JournalIntent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C96BE5B72C77CA86007B6CA0 /* Build configuration list for PBXNativeTarget "JournalIntent" */;
+			buildPhases = (
+				C96BE5942C77CA85007B6CA0 /* Sources */,
+				C96BE5952C77CA85007B6CA0 /* Frameworks */,
+				C96BE5962C77CA85007B6CA0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JournalIntent;
+			productName = JournalIntent;
+			productReference = C96BE5982C77CA85007B6CA0 /* JournalIntent.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		C96BE5A32C77CA86007B6CA0 /* JournalIntentUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C96BE5B42C77CA86007B6CA0 /* Build configuration list for PBXNativeTarget "JournalIntentUI" */;
+			buildPhases = (
+				C96BE5A02C77CA86007B6CA0 /* Sources */,
+				C96BE5A12C77CA86007B6CA0 /* Frameworks */,
+				C96BE5A22C77CA86007B6CA0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JournalIntentUI;
+			productName = JournalIntentUI;
+			productReference = C96BE5A42C77CA86007B6CA0 /* JournalIntentUI.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -98,6 +270,12 @@
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					C96BE5822C77CA25007B6CA0 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					C96BE5972C77CA85007B6CA0 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					C96BE5A32C77CA86007B6CA0 = {
 						CreatedOnToolsVersion = 15.4;
 					};
 				};
@@ -116,6 +294,8 @@
 			projectRoot = "";
 			targets = (
 				C96BE5822C77CA25007B6CA0 /* Quick Screen Journal */,
+				C96BE5972C77CA85007B6CA0 /* JournalIntent */,
+				C96BE5A32C77CA86007B6CA0 /* JournalIntentUI */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +310,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C96BE5962C77CA85007B6CA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C96BE5A22C77CA86007B6CA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C96BE5AC2C77CA86007B6CA0 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -137,12 +332,64 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9B3E83F2C7EBA340092B417 /* SharedData.swift in Sources */,
+				C96BE5BC2C77CABB007B6CA0 /* JournalIntents.intentdefinition in Sources */,
+				C9B3E8442C8178A20092B417 /* journalView.swift in Sources */,
 				C96BE5892C77CA25007B6CA0 /* ContentView.swift in Sources */,
+				C9CFEBEE2C928B9200D56B7B /* JournalDisplay.swift in Sources */,
 				C96BE5872C77CA25007B6CA0 /* Quick_Screen_JournalApp.swift in Sources */,
+				C9B3E8422C7F73960092B417 /* ViewController.swift in Sources */,
+				C9CFEBEC2C91596200D56B7B /* JournalEntry.swift in Sources */,
+				C96BE5C82C77D584007B6CA0 /* AppDelegate.swift in Sources */,
+				C96BE5C62C77D1A0007B6CA0 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C96BE5942C77CA85007B6CA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9B3E8402C7EBA340092B417 /* SharedData.swift in Sources */,
+				C96BE5C22C77CD0F007B6CA0 /* QuickJournalIntentHandler.swift in Sources */,
+				C96BE5BF2C77CCD5007B6CA0 /* JournalIntents.intentdefinition in Sources */,
+				C96BE59E2C77CA85007B6CA0 /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C96BE5A02C77CA86007B6CA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C96BE5C02C77CCD6007B6CA0 /* JournalIntents.intentdefinition in Sources */,
+				C96BE5A92C77CA86007B6CA0 /* IntentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C96BE5AF2C77CA86007B6CA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C96BE5A32C77CA86007B6CA0 /* JournalIntentUI */;
+			targetProxy = C96BE5AE2C77CA86007B6CA0 /* PBXContainerItemProxy */;
+		};
+		C96BE5B22C77CA86007B6CA0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C96BE5972C77CA85007B6CA0 /* JournalIntent */;
+			targetProxy = C96BE5B12C77CA86007B6CA0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C96BE5AA2C77CA86007B6CA0 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C96BE5AB2C77CA86007B6CA0 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C96BE58F2C77CA28007B6CA0 /* Debug */ = {
@@ -267,14 +514,17 @@
 		C96BE5922C77CA28007B6CA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Quick Screen Journal/Quick Screen Journal.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Quick Screen Journal/Preview Content\"";
 				DEVELOPMENT_TEAM = XRG5QWA8LG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Quick-Screen-Journal-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -296,14 +546,17 @@
 		C96BE5932C77CA28007B6CA0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Quick Screen Journal/Quick Screen Journal.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Quick Screen Journal/Preview Content\"";
 				DEVELOPMENT_TEAM = XRG5QWA8LG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Quick-Screen-Journal-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -316,6 +569,110 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "MattBartie.Quick-Screen-Journal";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C96BE5B52C77CA86007B6CA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = JournalIntentUI/JournalIntentUI.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XRG5QWA8LG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JournalIntentUI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = JournalIntentUI;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MattBartie.Quick-Screen-Journal.JournalIntentUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C96BE5B62C77CA86007B6CA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = JournalIntentUI/JournalIntentUI.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XRG5QWA8LG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JournalIntentUI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = JournalIntentUI;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MattBartie.Quick-Screen-Journal.JournalIntentUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C96BE5B82C77CA86007B6CA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = JournalIntent/JournalIntent.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XRG5QWA8LG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JournalIntent/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = JournalIntent;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MattBartie.Quick-Screen-Journal.JournalIntent";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C96BE5B92C77CA86007B6CA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = JournalIntent/JournalIntent.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XRG5QWA8LG;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = JournalIntent/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = JournalIntent;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MattBartie.Quick-Screen-Journal.JournalIntent";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -339,6 +696,24 @@
 			buildConfigurations = (
 				C96BE5922C77CA28007B6CA0 /* Debug */,
 				C96BE5932C77CA28007B6CA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C96BE5B42C77CA86007B6CA0 /* Build configuration list for PBXNativeTarget "JournalIntentUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C96BE5B52C77CA86007B6CA0 /* Debug */,
+				C96BE5B62C77CA86007B6CA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C96BE5B72C77CA86007B6CA0 /* Build configuration list for PBXNativeTarget "JournalIntent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C96BE5B82C77CA86007B6CA0 /* Debug */,
+				C96BE5B92C77CA86007B6CA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
