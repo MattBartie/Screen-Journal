@@ -19,7 +19,5 @@ By encouraging users to reflect on their intentions for using these apps, Screen
 
 - **ScenePhase Management:** The app uses `@Environment(\.scenePhase)` to respond to changes in the app's lifecycle, such as when it becomes active or goes into the background. This ensures that the app properly updates state (e.g., resetting `lastOpenedApp`) based on how the user interacts with the app.
 
-- **SharedData Management:** The app uses a shared data model (`SharedData`) to keep track of which app was last opened and whether it should be reopened after a journal entry is completed. This state management helps ensure smooth coordination between different parts of the app.
-
 By leveraging these technologies, Screen Journal offers a streamlined, automated way to reflect on app usage and helps users reduce their screen time through intentional reflection.
 
