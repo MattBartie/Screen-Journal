@@ -27,7 +27,7 @@ class QuickJournalIntentHandler: NSObject, QuickJournalIntentHandling {
 
         }
         else if app.rawValue == 1{
-            SharedData.lastOpenedApp = "reddit"
+            SharedData.lastOpenedApp = "Reddit"
 
         }
         else if app.rawValue == 2{
@@ -35,15 +35,21 @@ class QuickJournalIntentHandler: NSObject, QuickJournalIntentHandling {
 
         }
         else if app.rawValue == 3{
-            SharedData.lastOpenedApp = "instagram"
+            SharedData.lastOpenedApp = "Instagram"
         }
         else if app.rawValue == 4{
-            SharedData.lastOpenedApp = "tiktok"
+            SharedData.lastOpenedApp = "TikTok"
         }
         else if app.rawValue == 5{
-            SharedData.lastOpenedApp = "snapchat"
+            SharedData.lastOpenedApp = "Snapchat"
         }
-            
+        let lastOpenedApp = SharedData.lastOpenedApp
+        let appArray = SharedData.appNamesArray
+        
+        if(!appArray.contains(lastOpenedApp)){
+            SharedData.addAppName(lastOpenedApp)
+        }
+        
         
         // Create a user activity and respond with continueInApp
         let userActivity = NSUserActivity(activityType: NSStringFromClass(QuickJournalIntent.self))
@@ -62,6 +68,8 @@ class QuickJournalIntentHandler: NSObject, QuickJournalIntentHandling {
             let response = QuickJournalIntentResponse(code: .success, userActivity: userActivity)
             completion(response)
             print("App will not open as expected")
+            
+            
         }
         
     }

@@ -41,15 +41,15 @@ struct journalView: View {
         
                     Spacer()
                     VStack{
-                        
-                        
-                        
-                        
                         // NavigationLink to navigate to the new view when button is pressed
                         Button(action: {
                                 isFocused = false
                                 addJournal(app: lastOpenedApp, journal: userResponse)
-                                navigateToDifferentView = true // Set the navigation state
+                                navigateToDifferentView = true
+                                SharedData.incrementNotOpenTally(for: lastOpenedApp)
+                                SharedData.lastOpenedApp = "none"
+                                SharedData.shouldOpenApp = true
+
                             }) {
                                 Text("Do not Open \(lastOpenedApp)")
                                     .frame(width: 300, height: 50)
@@ -72,6 +72,7 @@ struct journalView: View {
                                 isFocused = false
                                 SharedData.shouldOpenApp = false
                                 addJournal(app: lastOpenedApp, journal: userResponse)
+                                SharedData.incrementOpenTally(for: lastOpenedApp)
                                 openApp(app: lastOpenedApp)
                             }
                         }) {
@@ -126,7 +127,7 @@ struct journalView: View {
                                 animateGradient.toggle()
                             }
                         }
-                        .opacity(0.2)
+                        .opacity(0.05)
                 }
             }
         }
