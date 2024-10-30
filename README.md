@@ -21,3 +21,21 @@ By encouraging users to reflect on their intentions for using these apps, Screen
 
 By leveraging these technologies, Screen Journal offers a streamlined, automated way to reflect on app usage and helps users reduce their screen time through intentional reflection.
 
+<table align="center">
+  <tr>
+    <td align="center">
+      <a href="images/Home.PNG">
+        <img src="images/Home.PNG" width="300px" alt="Home Screen">
+      </a>
+    </td>
+    <td align="center">
+      <a href="images/JournalView.PNG">
+        <img src="images/JournalView.PNG" width="300px" alt="Journal View">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" style="font-size: small;">Home Screen</td>
+    <td align="center" style="font-size: small;">Journal View, example of when not to open app</td>
+  </tr>
+</table>
