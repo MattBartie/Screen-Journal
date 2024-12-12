@@ -47,6 +47,7 @@ struct journalView: View {
                                 addJournal(app: lastOpenedApp, journal: userResponse)
                                 navigateToDifferentView = true
                                 SharedData.incrementNotOpenTally(for: lastOpenedApp)
+                                SharedData.logPastData(appName: lastOpenedApp, wasOpened: false)
                                 SharedData.lastOpenedApp = "none"
                                 SharedData.shouldOpenApp = true
 
@@ -73,6 +74,7 @@ struct journalView: View {
                                 SharedData.shouldOpenApp = false
                                 addJournal(app: lastOpenedApp, journal: userResponse)
                                 SharedData.incrementOpenTally(for: lastOpenedApp)
+                                SharedData.logPastData(appName: lastOpenedApp, wasOpened: true)
                                 openApp(app: lastOpenedApp)
                             }
                         }) {
@@ -113,6 +115,8 @@ struct journalView: View {
                         print("App is active, content view reloaded")
                     }
                     else if newPhase == .background{
+                        SharedData.logPastData(appName: lastOpenedApp, wasOpened: false)
+                        SharedData.incrementNotOpenTally(for: lastOpenedApp)
                         SharedData.lastOpenedApp = "none"
                         lastOpenedApp = SharedData.lastOpenedApp
                         print("leaving")
@@ -120,14 +124,8 @@ struct journalView: View {
                 }
                 .background {
                     LinearGradient(colors: [startColor, endColor], startPoint: .topLeading, endPoint: .bottomTrailing)
-                        .edgesIgnoringSafeArea(.all)
-                        .hueRotation(.degrees(animateGradient ? 45 : 0))
-                        .onAppear {
-                            withAnimation(.easeInOut(duration: 5).repeatForever(autoreverses: true)) {
-                                animateGradient.toggle()
-                            }
-                        }
                         .opacity(0.05)
+                        .ignoresSafeArea()
                 }
             }
         }

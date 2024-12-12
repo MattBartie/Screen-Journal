@@ -21,16 +21,20 @@ struct JournalDisplay: View {
     private let endColor: Color = .purple
     @State private var animateGradient: Bool = false
     
+    @State private var sortedItems: [JournalEntry] = []
+    
 
     var body: some View {
         
         NavigationStack {
             ZStack{
-                Color(.systemGroupedBackground)
-                        .edgesIgnoringSafeArea(.all)
-                LinearGradient(colors: [startColor, endColor], startPoint: .topLeading, endPoint: .bottomTrailing)
-                    .opacity(0.05)
-                    .edgesIgnoringSafeArea(.top)
+                GeometryReader { geometry in
+                    LinearGradient(colors: [startColor, endColor], startPoint: .topLeading, endPoint: .bottomTrailing)
+                        .opacity(0.05)
+                        .frame(width: geometry.size.width, height: geometry.size.height)
+                }
+                .edgesIgnoringSafeArea(.all)
+                
                 VStack {
                     //Rectangle()
                     //   .fill(Color.clear)
@@ -44,10 +48,15 @@ struct JournalDisplay: View {
                     
                     
                     List {
-                        ForEach(items.reversed()) { entry in
+                        ForEach(sortedItems) { entry in
                             JournalEntryView(entry: entry)
                         }
-                        
+                    }
+                    .onChange(of: items) { newItems in
+                        sortedItems = newItems.sorted { $0.creationDate > $1.creationDate }
+                    }
+                    .onAppear {
+                        sortedItems = items.sorted { $0.creationDate > $1.creationDate }
                     }
                     .frame(width:  UIScreen.main.bounds.width, height: UIScreen.main.bounds.height-180)
                     .scrollContentBackground(.hidden)
@@ -84,7 +93,7 @@ struct JournalDisplay: View {
                 }
                 .onAppear {
                     if !isDataInserted {
-                        insertSampleData()
+                        //     insertSampleData()
                         isDataInserted = true
                     }
                 }

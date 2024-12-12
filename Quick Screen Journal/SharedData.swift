@@ -10,16 +10,45 @@ import Foundation
 class SharedData {
     static let defaultsGroup: UserDefaults? = UserDefaults(suiteName: "group.MattBartie.Quick-Screen-Journal.shareddata")
     
+    struct PastDataEntry: Codable {
+            let appName: String
+            let date: Date
+            let wasOpened: Bool
+        }
+    
     enum Keys: String {
         case lastOpenedApp = "lastOpenedApp"
         case shouldOpenApp = "shouldOpenApp"
         case appOpenTally = "appOpenTally"
         case appNamesArray = "appNamesArray"
-        
+        case pastData = "pastData"
         
         var key: String {
             return self.rawValue
         }
+    }
+    
+    static var pastData: [PastDataEntry] {
+        get {
+            guard let data = defaultsGroup?.data(forKey: Keys.pastData.key) else {
+                return []
+            }
+            let decoder = JSONDecoder()
+            return (try? decoder.decode([PastDataEntry].self, from: data)) ?? []
+        }
+        set {
+            let encoder = JSONEncoder()
+            if let encoded = try? encoder.encode(newValue) {
+                defaultsGroup?.set(encoded, forKey: Keys.pastData.key)
+            }
+        }
+    }
+    
+    static func logPastData(appName: String, wasOpened: Bool) {
+        var currentPastData = pastData
+        let newEntry = PastDataEntry(appName: appName, date: Date(), wasOpened: wasOpened)
+        currentPastData.append(newEntry)
+        pastData = currentPastData
     }
     
     static var lastOpenedApp: String {
