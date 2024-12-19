@@ -9,6 +9,8 @@ struct ContentView: View {
     
     private let startColor: Color = .blue
     private let endColor: Color = .purple
+    @AppStorage("selectedTimeDelay") private var selectedTimeDelay: Int = 5
+    @AppStorage("customPromptQuestion") private var customPromptQuestion: String = "Do you really need to use this app right now?"
     
     var body: some View {
         NavigationStack {
@@ -23,13 +25,36 @@ struct ContentView: View {
 
                 
                 VStack(spacing: 20) {
+                    HStack {
+                        Spacer()
+                        Image(systemName: "questionmark.circle")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: UIScreen.main.bounds.width/20, height: UIScreen.main.bounds.width/20)
+                        
+                        // Separate NavigationLink with improved tap area
+                        NavigationLink {
+                            SettingsView()
+                        } label: {
+                            Image(systemName: "gearshape.fill")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: UIScreen.main.bounds.width/20, height: UIScreen.main.bounds.width/20)
+                                .foregroundColor(.primary)
+                        }
+                        .buttonStyle(PlainButtonStyle()) // Ensures native button behavior
+                        .contentShape(Rectangle()) // Makes the entire area tappable
+                    }
+                    // Remove the negative padding that was here before
+                    .padding(.horizontal)
+                                
                     //Top Text
                     Text("Overview")
                         .font(.largeTitle)
                         .bold()
-                        .padding(.top)
                         //.padding(.leading)
                         .frame(maxWidth: .infinity, alignment: .leading)
+
                     
                     //gets apps and pairs them
                     let apps = SharedData.appNamesArray

@@ -11,10 +11,14 @@ class SharedData {
     static let defaultsGroup: UserDefaults? = UserDefaults(suiteName: "group.MattBartie.Quick-Screen-Journal.shareddata")
     
     struct PastDataEntry: Codable {
-            let appName: String
-            let date: Date
-            let wasOpened: Bool
-        }
+        let appName: String
+        let date: Date
+        let wasOpened: Bool
+    }
+    struct AppAccessEntry: Codable {
+        let appName: String
+        let accessTime: Date
+    }
     
     enum Keys: String {
         case lastOpenedApp = "lastOpenedApp"
@@ -22,10 +26,39 @@ class SharedData {
         case appOpenTally = "appOpenTally"
         case appNamesArray = "appNamesArray"
         case pastData = "pastData"
+        case appAccessTimes = "appAccessTimes"
         
         var key: String {
             return self.rawValue
         }
+    }
+    // Store access times for apps
+    static var appAccessTimes: [String: Date] {
+        get {
+            guard let data = defaultsGroup?.data(forKey: Keys.appAccessTimes.key) else {
+                return [:]
+            }
+            let decoder = JSONDecoder()
+            return (try? decoder.decode([String: Date].self, from: data)) ?? [:]
+        }
+        set {
+            let encoder = JSONEncoder()
+            if let encoded = try? encoder.encode(newValue) {
+                defaultsGroup?.set(encoded, forKey: Keys.appAccessTimes.key)
+            }
+        }
+    }
+    
+    // Add or update an app's access time
+    static func setAppAccessTime(for appName: String, to accessTime: Date) {
+        var currentAccessTimes = appAccessTimes
+        currentAccessTimes[appName] = accessTime
+        appAccessTimes = currentAccessTimes
+    }
+    
+    // Get the access time for a specific app
+    static func getAppAccessTime(for appName: String) -> Date? {
+        return appAccessTimes[appName]
     }
     
     static var pastData: [PastDataEntry] {

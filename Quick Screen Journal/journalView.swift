@@ -21,6 +21,9 @@ struct journalView: View {
     @State private var animateGradient: Bool = false
     
     @State private var navigateToDifferentView = false
+    @AppStorage("selectedTimeDelay") private var selectedTimeDelay: Int = 5
+    @State private var showingTimePicker = false
+     
 
     
     var body: some View {
@@ -41,8 +44,11 @@ struct journalView: View {
         
                     Spacer()
                     VStack{
-                        // NavigationLink to navigate to the new view when button is pressed
-                        Button(action: {
+                        HStack{
+                            
+                            
+                            // NavigationLink to navigate to the new view when button is pressed
+                            Button(action: {
                                 isFocused = false
                                 addJournal(app: lastOpenedApp, journal: userResponse)
                                 navigateToDifferentView = true
@@ -50,22 +56,28 @@ struct journalView: View {
                                 SharedData.logPastData(appName: lastOpenedApp, wasOpened: false)
                                 SharedData.lastOpenedApp = "none"
                                 SharedData.shouldOpenApp = true
-
+                                
+                                
+                                
                             }) {
                                 Text("Do not Open \(lastOpenedApp)")
-                                    .frame(width: 300, height: 50)
+                                    .frame(width: UIScreen.main.bounds.width/2, height: 50)
                                     .background(Color.green)
                                     .foregroundColor(.white)
                                     .cornerRadius(20)
                             }
                             .padding(10)
-
-                            // NavigationLink to navigate to the new view when the state changes
+                            // DONT DELETE THIS, it makes the do not open button work
                             NavigationLink(destination: TabContainerView(), isActive: $navigateToDifferentView) {
                                 EmptyView()
-                                // Use an EmptyView to keep the NavigationLink functional without displaying anything
                             }
-                        
+                            
+                            TimePickerButton()
+                            
+                            
+                           
+                            
+                        }
                         
                         
                         Button(action: {
@@ -76,6 +88,8 @@ struct journalView: View {
                                 SharedData.incrementOpenTally(for: lastOpenedApp)
                                 SharedData.logPastData(appName: lastOpenedApp, wasOpened: true)
                                 openApp(app: lastOpenedApp)
+
+                                SharedData.setAppAccessTime(for: lastOpenedApp, to: Date().addingTimeInterval(TimeInterval(selectedTimeDelay*60)))
                             }
                         }) {
                             Text("Open \(lastOpenedApp)")
@@ -179,6 +193,50 @@ struct viewForPreview : View {
      var body: some View {
           journalView(lastOpenedApp: $value)
      }
+}
+
+struct TimePickerButton: View {
+    @AppStorage("selectedTimeDelay") var selectedTimeDelay: Int = 5
+    @State private var showingTimePicker = false
+    private let timeDelayOptions = [5, 10, 15, 30, 60]
+    
+    var body: some View {
+        Button {
+            showingTimePicker.toggle()
+        } label: {
+            HStack(spacing: 4) {
+                Image(systemName: "clock.fill")
+                Text("\(selectedTimeDelay)m")
+                    .font(.subheadline)
+                    .fontWeight(.medium)
+            }
+            .foregroundColor(.primary)
+            .padding(8)
+            .background(
+                RoundedRectangle(cornerRadius: 8)
+                    .fill(Color(.systemBackground))
+                    .shadow(color: .black.opacity(0.1), radius: 2)
+            )
+        }
+        .popover(isPresented: $showingTimePicker, arrowEdge: .bottom) {
+            VStack(spacing: 0) {
+                Text("Select Delay")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+                    .padding(.top, 12)
+                
+                Picker("", selection: $selectedTimeDelay) {
+                    ForEach(timeDelayOptions, id: \.self) { minutes in
+                        Text("\(minutes) min").tag(minutes)
+                    }
+                }
+                .pickerStyle(.wheel)
+                .frame(width: 100, height: 120)
+            }
+            .padding(.horizontal)
+            .presentationCompactAdaptation(.popover) // Ensures it stays as a popover on iPhone
+        }
+    }
 }
 
 

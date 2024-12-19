@@ -57,10 +57,20 @@ class QuickJournalIntentHandler: NSObject, QuickJournalIntentHandling {
         userActivity.userInfo = ["app": app.rawValue] // Pass the necessary data
         
         // Access SharedData.shouldOpenApp directly
-        if SharedData.shouldOpenApp {
+        
+        if let accessTime = SharedData.getAppAccessTime(for: SharedData.lastOpenedApp),
+           Date() < accessTime {
+            // If app should not open, set the appropriate state
+            SharedData.shouldOpenApp = true
+            SharedData.lastOpenedApp = "none"
+            let response = QuickJournalIntentResponse(code: .success, userActivity: userActivity)
+            completion(response)
+            print("App will not open as expected")
+        } else if SharedData.shouldOpenApp {
+            // Open the app even if access time is not valid
             let response = QuickJournalIntentResponse(code: .continueInApp, userActivity: userActivity)
             completion(response)
-            print("Opening app as expected")
+            print("Opening app despite invalid access time.")
         } else {
             // If app should not open, set the appropriate state
             SharedData.shouldOpenApp = true

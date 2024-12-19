@@ -62,6 +62,7 @@ struct StatsDetailView: View {
                 .padding()
 
             let data = returnStats(for: appName)
+            
             VStack {
                 Chart {
                     ForEach(data) { item in
@@ -78,16 +79,37 @@ struct StatsDetailView: View {
                         .foregroundStyle(Color.accentColor)
                     }
                 }
-                .chartLegend(position: .bottom) {
-                    HStack {
-                        Text("Active Time")
-                            .foregroundStyle(Color.accentColor.opacity(0.4))
-                        Text("Stopped Time")
-                            .foregroundStyle(Color.accentColor)
-                    }
-                }
                 .aspectRatio(1, contentMode: .fit)
                 .padding()
+                .chartXAxis {
+                    AxisMarks(values: .automatic) { _ in
+                        AxisTick()
+                        AxisGridLine()
+                        AxisValueLabel()
+                    }
+                }
+                .chartYAxis {
+                    AxisMarks(position: .leading, values: .automatic) { _ in
+                        AxisTick()
+                        AxisGridLine()
+                        AxisValueLabel()
+                    }
+                }
+                HStack {
+                    HStack {
+                        Rectangle()
+                            .fill(Color.accentColor.opacity(0.4))
+                            .frame(width: 20, height: 10)
+                        Text("Open")
+                    }
+                    HStack {
+                        Rectangle()
+                            .fill(Color.accentColor)
+                            .frame(width: 20, height: 10)
+                        Text("Didn't Opened")
+                    }
+                }
+                
             }
             .background(
                 RoundedRectangle(cornerRadius: 20)

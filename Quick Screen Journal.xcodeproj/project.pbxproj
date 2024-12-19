@@ -31,6 +31,7 @@
 		C9C72DC32CD2ED790036C200 /* StatsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C72DC22CD2ED790036C200 /* StatsDetailView.swift */; };
 		C9CFEBEC2C91596200D56B7B /* JournalEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CFEBEB2C91596200D56B7B /* JournalEntry.swift */; };
 		C9CFEBEE2C928B9200D56B7B /* JournalDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CFEBED2C928B9200D56B7B /* JournalDisplay.swift */; };
+		C9E8B60A2D10FC39008DFB29 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E8B6092D10FC30008DFB29 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		C9C72DC22CD2ED790036C200 /* StatsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsDetailView.swift; sourceTree = "<group>"; };
 		C9CFEBEB2C91596200D56B7B /* JournalEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalEntry.swift; sourceTree = "<group>"; };
 		C9CFEBED2C928B9200D56B7B /* JournalDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalDisplay.swift; sourceTree = "<group>"; };
+		C9E8B6092D10FC30008DFB29 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				C96BE5BB2C77CABB007B6CA0 /* JournalIntents.intentdefinition */,
 				C96BE5862C77CA25007B6CA0 /* Quick_Screen_JournalApp.swift */,
 				C96BE5882C77CA25007B6CA0 /* ContentView.swift */,
+				C9E8B6092D10FC30008DFB29 /* SettingsView.swift */,
 				C9C72DC22CD2ED790036C200 /* StatsDetailView.swift */,
 				C9CFEBED2C928B9200D56B7B /* JournalDisplay.swift */,
 				C9B3E8432C8178A20092B417 /* journalView.swift */,
@@ -344,6 +347,7 @@
 				C96BE5872C77CA25007B6CA0 /* Quick_Screen_JournalApp.swift in Sources */,
 				C9B3E8422C7F73960092B417 /* ViewController.swift in Sources */,
 				C9CFEBEC2C91596200D56B7B /* JournalEntry.swift in Sources */,
+				C9E8B60A2D10FC39008DFB29 /* SettingsView.swift in Sources */,
 				C96BE5C82C77D584007B6CA0 /* AppDelegate.swift in Sources */,
 				C96BE5C62C77D1A0007B6CA0 /* SceneDelegate.swift in Sources */,
 			);
